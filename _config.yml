@@ -1,3 +1,5 @@
 collections:
-  categories:
+  tags:
     output: true
+
+permalink: /:categories/:title:output_ext

@@ -1,8 +1,12 @@
 ---
+title: Pineapple
 layout: post
 author: jill
-category: Security
-tags: [tropical, exotic, sour]
+category: Tech
+tags: [security]
+img:
+color:
+bgcolor: '#bde0ff'
 ---
 A banana is an edible fruit – botanically a berry – produced by several kinds
 of large herbaceous flowering plants in the genus Musa.

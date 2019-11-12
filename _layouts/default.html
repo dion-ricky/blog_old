@@ -4,36 +4,33 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, shrink-to-fit=no">
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/public/styles/master.css">
+    <link rel="stylesheet" href={{"/public/styles/master.css" | relative_url}}>
   </head>
-  <body>
-    <header>
-      <div class="header-wrapper flex flex-vertical-center">
-        <div class="flex flex-vertical-center">
-          <a class="header-title flex flex-vertical-center" href="/">
-            <img style="width: 30px; margin-right: .75rem;" src="/public/assets/LogoLeft.svg" alt="Logo">
-            <span>Dion Ricky</span>
-          </a>
-        </div>
-        <div class="nav">
-          {% for item in site.data.navigation %}
-            <a href="{{ item.link }}" {% if page.category == item.name or page.url == item.link %}class="nav-item-active nav-item"{% endif %} class="nav-item">
+  <body class="flex flex-vertical">
+    <main>
+      <header>
+        <div class="header-wrapper flex flex-vertical-center">
+          <div class="flex flex-vertical-center">
+            <a class="header-title flex flex-vertical-center" href="/">
+              <img style="width: 30px; margin-right: .75rem;" src={{"/public/assets/LogoLeft.svg" | relative_url}} alt="Logo">
+              <span>Dion Ricky</span>
+            </a>
+          </div>
+          <div class="nav">
+            {% for item in site.data.navigation %}
+            <a href="{{ item.link | relative_url }}" {% if page.category == item.name or page.url == item.link %}class="nav-item-active nav-item"{% endif %} class="nav-item">
               {{ item.name }}
             </a>
-          {% endfor %}
-          {% for item in site.categories %}
-            <a href="{{ item.url }}" {% if page.category == item.name or page.url == item.url %}class="nav-item-active nav-item"{% endif %} class="nav-item">
-              {{ item.name }}
-            </a>
-          {% endfor %}
+            {% endfor %}
+          </div>
         </div>
-      </div>
-    </header>
-    {{ content }}
+      </header>
+      {{ content }}
+    </main>
     <footer>
       <div class="footer-content">
         <p>Made with &#10084; by
-          <a href="#">@dry</a>
+          <a href="/">@dry</a>
         </p>
       </div>
     </footer>

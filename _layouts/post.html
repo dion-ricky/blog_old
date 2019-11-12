@@ -8,15 +8,29 @@ layout: default
     </h1>
   </div>
   <div class="post-category">
-    <a href="#">{{ page.category }}</a>
+    {% for item in site.data.navigation %}
+      {% if item.name == page.category %}
+        <a href="{{ item.link }}">
+          {{ item.name }}
+        </a>
+      {% endif %}
+    {% endfor %}
     <span> · </span>
     <span># </span>
     {% for tag in page.tags %}
-    <a href="#">{{tag}}</a>
-    <span>, </span>
+      {% for t in site.tags %}
+        {% if t.name == tag %}
+          <a href="{{ t.url }}">{{ tag }}</a>
+        {% endif %}
+      {% endfor %}
+      {% if forloop.last == true %}
+        <span></span>
+      {% else %}
+        <span>, </span>
+      {% endif %}
     {% endfor %}
     <br>
-    <span>{{ page.date | date_to_string }}</span>
+    <span>{{ page.date | date: "%b %e, %Y" }}</span>
   </div>
   <div class="post-content">
     <p>{{ content }}</p>
