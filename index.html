@@ -1,0 +1,218 @@
+---
+# fm
+layout: default
+title: Home
+---
+<div class="content-wrapper" style="padding-top: 5rem;">
+  <div class="post-group">
+    <div class="flex flex-vertical-center flex-h-space-between">
+      <h1>Latest Posts</h1>
+      <a href="#" class="btn">View all</a>
+    </div>
+    <div class="grid grid-2x2">
+      {% for post in site.posts %}
+      <div class="post-banner-bg flex" onclick="window.location.href='{{ post.url }}'">
+        <div class="post-banner flex">
+          <div class="post-banner-details flex">
+            <a href="#" class="post-banner-category">{{ post.category }}</a>
+            <div class="post-banner-tags">
+              <span># </span>
+              {% for tag in post.tags %}
+                <a href="#">{{ tag }}</a>
+                <span>, </span>
+              {% endfor %}
+            </div>
+          </div>
+          <h3 class="post-banner-title">{{ post.title }}</h3>
+        </div>
+      </div>
+      {% endfor %}
+      <div class="post-banner-bg flex" onclick="window.location.href='./#'">
+        <div class="post-banner flex">
+          <div class="post-banner-details flex">
+            <a href="#" class="post-banner-category">Category</a>
+            <div class="post-banner-tags">
+              <span># </span>
+              <a href="#">tag1</a>
+              <span>, </span>
+              <a href="#">tag2</a>
+              <span>,  </span>
+              <a href="#">tag3</a>
+            </div>
+          </div>
+          <h3 class="post-banner-title">Lorem ipsum dolor sit amet, consectetur amet</h3>
+        </div>
+      </div>
+      <div class="post-banner-bg flex" onclick="window.location.href='./#'">
+        <div class="post-banner flex">
+          <div class="post-banner-details flex">
+            <a href="#" class="post-banner-category">Category</a>
+            <div class="post-banner-tags">
+              <span># </span>
+              <a href="#">tag1</a>
+              <span>, </span>
+              <a href="#">tag2</a>
+              <span>,  </span>
+              <a href="#">tag3</a>
+            </div>
+          </div>
+          <h3 class="post-banner-title">Lorem ipsum dolor sit amet, consectetur amet</h3>
+        </div>
+      </div>
+      <div class="post-banner-bg flex" onclick="window.location.href='./#'">
+        <div class="post-banner flex">
+          <div class="post-banner-details flex">
+            <a href="#" class="post-banner-category">Category</a>
+            <div class="post-banner-tags">
+              <span># </span>
+              <a href="#">tag1</a>
+              <span>, </span>
+              <a href="#">tag2</a>
+              <span>,  </span>
+              <a href="#">tag3</a>
+            </div>
+          </div>
+          <h3 class="post-banner-title">Lorem ipsum dolor sit amet, consectetur amet</h3>
+        </div>
+      </div>
+      <div class="post-banner-bg flex" onclick="window.location.href='./#'">
+        <div class="post-banner flex">
+          <div class="post-banner-details flex">
+            <a href="#" class="post-banner-category">Category</a>
+            <div class="post-banner-tags">
+              <span># </span>
+              <a href="#">tag1</a>
+              <span>, </span>
+              <a href="#">tag2</a>
+              <span>,  </span>
+              <a href="#">tag3</a>
+            </div>
+          </div>
+          <h3 class="post-banner-title">Lorem ipsum dolor sit amet, consectetur amet</h3>
+        </div>
+      </div>
+      <div class="post-banner-bg flex" onclick="window.location.href='./#'">
+        <div class="post-banner flex">
+          <div class="post-banner-details flex">
+            <a href="#" class="post-banner-category">Category</a>
+            <div class="post-banner-tags">
+              <span># </span>
+              <a href="#">tag1</a>
+              <span>, </span>
+              <a href="#">tag2</a>
+              <span>,  </span>
+              <a href="#">tag3</a>
+            </div>
+          </div>
+          <h3 class="post-banner-title">Lorem ipsum dolor sit amet, consectetur amet</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="content-wrapper">
+      <div class="post-group">
+        <div class="flex flex-vertical-center flex-h-space-between">
+          <h1>All Posts</h1>
+          <a href="#" class="btn">View all</a>
+        </div>
+        <div class="grid grid-2x2">
+          <div class="post-banner-bg flex" onclick="window.location.href='./#'">
+            <div class="post-banner flex">
+              <div class="post-banner-details flex">
+                <a href="#" class="post-banner-category">Category</a>
+                <div class="post-banner-tags">
+                  <span># </span>
+                  <a href="#">tag1</a>
+                  <span>, </span>
+                  <a href="#">tag2</a>
+                  <span>,  </span>
+                  <a href="#">tag3</a>
+                </div>
+              </div>
+              <h3 class="post-banner-title">Lorem ipsum dolor sit amet, consectetur amet</h3>
+            </div>
+          </div>
+          <div class="post-banner-bg flex" onclick="window.location.href='./#'">
+            <div class="post-banner flex">
+              <div class="post-banner-details flex">
+                <a href="#" class="post-banner-category">Category</a>
+                <div class="post-banner-tags">
+                  <span># </span>
+                  <a href="#">tag1</a>
+                  <span>, </span>
+                  <a href="#">tag2</a>
+                  <span>,  </span>
+                  <a href="#">tag3</a>
+                </div>
+              </div>
+              <h3 class="post-banner-title">Lorem ipsum dolor sit amet, consectetur amet</h3>
+            </div>
+          </div>
+          <div class="post-banner-bg flex" onclick="window.location.href='./#'">
+            <div class="post-banner flex">
+              <div class="post-banner-details flex">
+                <a href="#" class="post-banner-category">Category</a>
+                <div class="post-banner-tags">
+                  <span># </span>
+                  <a href="#">tag1</a>
+                  <span>, </span>
+                  <a href="#">tag2</a>
+                  <span>,  </span>
+                  <a href="#">tag3</a>
+                </div>
+              </div>
+              <h3 class="post-banner-title">Lorem ipsum dolor sit amet, consectetur amet</h3>
+            </div>
+          </div>
+          <div class="post-banner-bg flex" onclick="window.location.href='./#'">
+            <div class="post-banner flex">
+              <div class="post-banner-details flex">
+                <a href="#" class="post-banner-category">Category</a>
+                <div class="post-banner-tags">
+                  <span># </span>
+                  <a href="#">tag1</a>
+                  <span>, </span>
+                  <a href="#">tag2</a>
+                  <span>,  </span>
+                  <a href="#">tag3</a>
+                </div>
+              </div>
+              <h3 class="post-banner-title">Lorem ipsum dolor sit amet, consectetur amet</h3>
+            </div>
+          </div>
+          <div class="post-banner-bg flex" onclick="window.location.href='./#'">
+            <div class="post-banner flex">
+              <div class="post-banner-details flex">
+                <a href="#" class="post-banner-category">Category</a>
+                <div class="post-banner-tags">
+                  <span># </span>
+                  <a href="#">tag1</a>
+                  <span>, </span>
+                  <a href="#">tag2</a>
+                  <span>,  </span>
+                  <a href="#">tag3</a>
+                </div>
+              </div>
+              <h3 class="post-banner-title">Lorem ipsum dolor sit amet, consectetur amet</h3>
+            </div>
+          </div>
+          <div class="post-banner-bg flex" onclick="window.location.href='./#'">
+            <div class="post-banner flex">
+              <div class="post-banner-details flex">
+                <a href="#" class="post-banner-category">Category</a>
+                <div class="post-banner-tags">
+                  <span># </span>
+                  <a href="#">tag1</a>
+                  <span>, </span>
+                  <a href="#">tag2</a>
+                  <span>,  </span>
+                  <a href="#">tag3</a>
+                </div>
+              </div>
+              <h3 class="post-banner-title">Lorem ipsum dolor sit amet, consectetur amet</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
