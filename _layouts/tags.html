@@ -10,13 +10,13 @@ layout: default
     <div class="grid grid-2x2">
       {% for post in posts %}
         {% if post.tags contains page.name%}
-        <div class="post-banner-bg flex" onclick="window.location.href='{{ post.url }}'"
-        style="{% if post.img %} background-image: url({{ '/public/assets/' | append: post.img }}); background-repeat: no-repeat; background-size: cover; {% else %} {% if post.bgcolor %} background: {{ post.bgcolor }}; {% else %} background: aliceblue; {% endif %}  {% endif %} {%if post.color %} color: {{post.color}}; {% endif %}">
+        <div class="post-banner-bg flex" onclick="window.location.href='{{ post.url | relative_url }}'"
+        style="{% if post.img %} background-image: url({{ '/public/assets/' | append: post.img | relative_url }}); background-repeat: no-repeat; background-size: cover; {% else %} {% if post.bgcolor %} background: {{ post.bgcolor }}; {% else %} background: aliceblue; {% endif %}  {% endif %} {%if post.color %} color: {{post.color}}; {% endif %}">
             <div class="post-banner flex">
               <div class="post-banner-details flex">
                 {% for item in site.data.navigation %}
                   {% if item.name == post.category %}
-                    <a href="{{ item.link }}" class="post-banner-category">
+                    <a href="{{ item.link | relative_url }}" class="post-banner-category">
                       {{ item.name }}
                     </a>
                   {% endif %}
@@ -26,7 +26,7 @@ layout: default
                   {% for tag in post.tags %}
                     {% for t in site.tags %}
                       {% if t.name == tag %}
-                        <a href="{{ t.url }}">{{ tag }}</a>
+                        <a href="{{ t.url | relative_url }}">{{ tag }}</a>
                       {% endif %}
                     {% endfor %}
                     {% if forloop.last == true %}
