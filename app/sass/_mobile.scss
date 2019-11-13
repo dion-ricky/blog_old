@@ -8,7 +8,9 @@
     display: block;
     visibility: visible;
   }
-  div.post-grid {
+
+  .post-wrapper {
+    max-width: 320px;
   }
 }
 

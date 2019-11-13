@@ -18,7 +18,10 @@
 
   .nav-toggler {
     display: block;
-    visibility: visible; } }
+    visibility: visible; }
+
+  .post-wrapper {
+    max-width: 320px; } }
 @media only screen and (min-device-width: 641px) {
   .nav {
     display: block; }
@@ -183,7 +186,7 @@ footer {
   background: #121212;
   color: #fff;
   margin: 2rem 0 0 0;
-  padding: 1rem 0 1rem 0; }
+  padding: 1rem; }
 
 .footer-content {
   max-width: 1080px;
