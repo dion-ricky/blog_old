@@ -18,7 +18,7 @@
           </div>
           <div class="nav">
             {% for item in site.data.navigation %}
-            <a href="{{ item.link | relative_url }}" {% if page.category == item.name or page.url == item.link %}class="nav-item-active nav-item"{% endif %} class="nav-item">
+            <a href="{{ item.link | relative_url }}" {% if page.category == item.name or page.url == item.link or page.title == item.name %}class="nav-item-active nav-item"{% endif %} class="nav-item">
               {{ item.name }}
             </a>
             {% endfor %}
