@@ -18,11 +18,25 @@
           </div>
           <div class="nav">
             {% for item in site.data.navigation %}
-            <a href="{{ item.link | relative_url }}" {% if page.category == item.name or page.url == item.link or page.title == item.name %}class="nav-item-active nav-item"{% endif %} class="nav-item">
+            <a href="{{ item.link | relative_url }}" class="{% if page.category == item.name or page.url == item.link or page.title == item.name %} nav-item-active {% endif %} nav-item">
               {{ item.name }}
             </a>
             {% endfor %}
           </div>
+          <div class="nav-toggler">
+            <a href="javascript:void(0)" class="nav-toggler-btn" onclick="toggleNav()">Menu</a>
+          </div>
+        </div>
+        <div id="mobileNav" class="nav-mobile" style="height: 0">
+          <li>
+            {% for item in site.data.navigation %}
+            <ul onclick="window.location.href='{{ item.link | relative_url }}'">
+              <a href="{{ item.link | relative_url }}" class="nav-item-active">
+                {{ item.name }}
+              </a>
+            </ul>
+            {% endfor %}
+          </li>
         </div>
       </header>
       {{ content }}
@@ -43,5 +57,18 @@
     gtag('js', new Date());
 
     gtag('config', 'UA-96361562-3');
+  </script>
+  <script type="text/javascript">
+    function toggleNav() {
+      var el = document.getElementById("mobileNav");
+
+      if (el.style.height == '0px') {
+        el.style.height = '210px';
+        // el.className += " " + name;
+      } else {
+        el.style.height = '0px';
+        // el.className = el.className.replace(/\bnav-mobile-open\b/g, "");
+      }
+    }
   </script>
 </html>

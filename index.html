@@ -10,11 +10,11 @@ title: Home
         <a href="{{ '/latest' | relative_url }}" class="btn">View all</a>
       {% endif %}
     </div>
-    <div class="grid grid-2x2">
+    <div class="grid post-grid">
       {% for post in site.posts limit:6 %}
       <div class="post-banner-bg flex" onclick="window.location.href='{{ post.url | relative_url }}'"
       style="{% if post.img %} background-image: url({{ '/public/assets/' | append: post.img | relative_url }}); background-repeat: no-repeat; background-size: cover; {% else %} {% if post.bgcolor %} background: {{ post.bgcolor }}; {% else %} background: aliceblue; {% endif %}  {% endif %} {%if post.color %} color: {{post.color}}; {% endif %}">
-        <div class="post-banner flex">
+        <div class="post-banner flex {% if post.img %} overlay {% endif %} ">
           <div class="post-banner-details flex">
             {% for item in site.data.navigation %}
               {% if item.name == post.category %}
@@ -54,11 +54,11 @@ title: Home
         <a href="{{ '/popular' | relative_url }}" class="btn">View all</a>
       {% endif %}
     </div>
-    <div class="grid grid-2x2">
+    <div class="grid post-grid">
       {% for post in site.posts limit:6 %}
       <div class="post-banner-bg flex" onclick="window.location.href='{{ post.url | relative_url }}'"
       style="{% if post.img %} background-image: url({{ '/public/assets/' | append: post.img | relative_url }}); background-repeat: no-repeat; background-size: cover; {% else %} {% if post.bgcolor %} background: {{ post.bgcolor }}; {% else %} background: aliceblue; {% endif %}  {% endif %} {%if post.color %} color: {{post.color}}; {% endif %}">
-        <div class="post-banner flex">
+        <div class="post-banner flex {% if post.img %} overlay {% endif %} ">
           <div class="post-banner-details flex">
             {% for item in site.data.navigation %}
               {% if item.name == post.category %}
