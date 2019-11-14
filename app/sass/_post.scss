@@ -3,6 +3,13 @@
   margin: auto;
 }
 
+.post-img {
+  min-height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
+
 .post-category {
   color: rgba(0, 0, 0, 0.54);
 
@@ -13,4 +20,13 @@
 
 .post-content {
   font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+blockquote {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  font-weight: 600;
+  border-left: 5px solid #eee;
+  padding-left: 1rem;
 }

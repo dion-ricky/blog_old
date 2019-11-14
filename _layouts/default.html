@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, shrink-to-fit=no">
-    <title>{{ page.title }}</title>
+    <meta name="description" content="{% if page.description %} {{ page.description }} {% else %} {{ site.description }} {% endif %}">
+    <title>{{ page.title | append: " - " | append: site.title }}</title>
     <link rel="stylesheet" href={{"/public/styles/master.css" | relative_url}}>
   </head>
   <body class="flex flex-vertical">
@@ -11,7 +12,7 @@
       <header>
         <div class="header-wrapper flex flex-vertical-center">
           <div class="flex flex-vertical-center">
-            <a class="header-title flex flex-vertical-center" href={{ '/' | relative_url}}>
+            <a class="header-title flex flex-vertical-center link-override" href={{ '/' | relative_url}}>
               <img style="width: 30px; margin-right: .75rem;" src={{"/public/assets/LogoLeft.svg" | relative_url}} alt="Logo">
               <span>Dion Ricky</span>
             </a>
@@ -44,7 +45,10 @@
     <footer>
       <div class="footer-content">
         <p>Made with &#10084; by
-          <a href="/">@dry</a>
+          <a href="/" class="link-override">@dry</a>
+        </p>
+        <p style="font-size: 0.95rem; color: #bbb;">
+          Hosted in <a href="https://www.github.com/" class="link-override">Github</a>. Built by <a href="https://jekyllrb.com" class="link-override">Jekyll</a>
         </p>
       </div>
     </footer>
