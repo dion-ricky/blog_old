@@ -1,6 +1,6 @@
 {% assign post = include.post %}
 <div class="post-banner-bg flex" onclick="window.location.href='{{ post.url | relative_url }}'"
-style="{% if post.img %} background-image: url({{ '/public/assets/' | append: post.img | relative_url }}); background-repeat: no-repeat; background-size: cover; {% else %} {% if post.bgcolor %} background: {{ post.bgcolor }}; {% else %} background: aliceblue; {% endif %}  {% endif %} {%if post.color %} color: {{post.color}}; {% endif %}">
+style="{% if post.img %} background-image: url({{ '/public/assets/' | append: post.img | relative_url }}); background-repeat: no-repeat; background-size: cover; {% else %} {% if post.bgcolor %} background: {{ post.bgcolor }}; {% else %} background: rgba(0, 214, 214, 0.5); {% endif %}  {% endif %} {%if post.color %} color: {{post.color}}; {% endif %}">
   <div class="post-banner flex {% if post.img %} overlay {% endif %} ">
     <div class="post-banner-details flex">
       {% for item in site.data.navigation %}

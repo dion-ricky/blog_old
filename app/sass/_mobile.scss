@@ -13,6 +13,17 @@
     max-width: 320px;
   }
 
+  .post-grid {
+    grid-template-columns: 1fr;
+    margin: 0 1rem;
+  }
+
+  .toc {
+    display: none;
+    margin-top: 0;
+    grid-row-start: 2;
+  }
+
   div.post-banner-tags {
     opacity: 1;
     visibility: visible;

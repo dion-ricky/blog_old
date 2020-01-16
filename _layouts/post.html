@@ -1,43 +1,51 @@
 ---
 layout: default
+css: 
+js:
+  - <script src="/public/scripts/toc.js" charset="utf-8"></script>
+  - <script src="/public/scripts/pageJumper.js" charset="utf-8"></script>
 ---
-<div class="post-wrapper" style="padding-top: 5rem;">
-  {% if page.img %}
-    <div class="post-img" style="background-image: url({{ '/public/assets/' | append: page.img }})">
-
-    </div>
-  {% endif %}
-  <div class="post-title">
-    <h1>
-      {{ page.title }}
-    </h1>
+<div class="post-grid">
+  <div class="toc-wrapper" role="toc">
   </div>
-  <div class="post-category">
-    {% for item in site.data.navigation %}
-      {% if item.name == page.category %}
-        <a href="{{ item.link | relative_url }}" class="link-override">
-          {{ item.name }}
-        </a>
-      {% endif %}
-    {% endfor %}
-    <span> · </span>
-    <span># </span>
-    {% for tag in page.tags %}
-      {% for t in site.tags %}
-        {% if t.name == tag %}
-          <a href="{{ t.url | relative_url }}" class="link-override">{{ tag }}</a>
+  <div class="post-wrapper">
+    {% if page.img %}
+      <div class="post-img" style="background-image: url({{ '/public/assets/' | append: page.img }})">
+        
+      </div>
+    {% endif %}
+    <div class="post-title">
+      <h1>
+        {{ page.title }}
+      </h1>
+    </div>
+    <div class="post-category">
+      {% for item in site.data.navigation %}
+        {% if item.name == page.category %}
+          <a href="{{ item.link | relative_url }}" class="link-override">
+            {{item.name}}
+          </a>
         {% endif %}
       {% endfor %}
-      {% if forloop.last == true %}
-        <span></span>
-      {% else %}
-        <span>, </span>
-      {% endif %}
-    {% endfor %}
-    <br>
-    <span>{{ page.date | date: "%b %e, %Y" }}</span>
-  </div>
-  <div class="post-content">
-    <p>{{ content }}</p>
+      <span> · </span>
+      <span>#</span>
+      {% for tag in page.tags %}
+        {% for t in site.tags %}
+          {% if t.name == tag %}
+            <a href="{{ t.url | relative_url }}" class="link-override">{{tag}}</a>
+          {% endif %}
+        {% endfor %}
+        {% if forloop.last == true %}
+          <span></span>
+        {% else %}
+          <span>, </span>
+        {% endif %}
+      {% endfor %}
+      <br>
+      <span>{{ page.date | date: "%b %e, %Y" }}</span>
+    </div>
+    <div class="post-content">
+      <p>{{ content }}</p>
+    </div>
   </div>
 </div>

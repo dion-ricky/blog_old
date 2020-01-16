@@ -6,11 +6,11 @@ title: Blog
   <div class="post-group">
     <div class="flex flex-vertical-center flex-h-space-between">
       <h1>Latest Posts</h1>
-      {% if site.posts > 6 %}
+      {% if site.posts.size > 6 %}
         <a href="{{ '/latest' | relative_url }}" class="btn">View all</a>
       {% endif %}
     </div>
-    <div class="grid post-grid">
+    <div class="grid posts-grid">
       {% for post in site.posts limit:6 %}
         {% include post-banner.html post=post %}
       {% endfor %}
@@ -21,11 +21,11 @@ title: Blog
   <div class="post-group">
     <div class="flex flex-vertical-center flex-h-space-between">
       <h1>Most Popular</h1>
-      {% if site.posts > 6 %}
+      {% if site.posts.size > 6 %}
         <a href="{{ '/popular' | relative_url }}" class="btn">View all</a>
       {% endif %}
     </div>
-    <div class="grid post-grid">
+    <div class="grid posts-grid">
       {% for post in site.posts limit:6 %}
         {% include post-banner.html post=post %}
       {% endfor %}
