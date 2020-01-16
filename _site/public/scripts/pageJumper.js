@@ -26,7 +26,7 @@ $("document").ready(function() {
           var currentElement = $(hash);
           var id = currentElement.attr("id");
           currentElement.removeAttr("id");
-          window.location.hash = hash;
+          history.replaceState(undefined, undefined, hash)
           currentElement.attr("id", id);
         });
       }
