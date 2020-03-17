@@ -14,3 +14,6 @@ description: >-
 
 plugins:
   - jemoji
+
+sass:
+  sass_dir: public/styles

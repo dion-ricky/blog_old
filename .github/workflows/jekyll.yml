@@ -12,12 +12,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Compile CSS from SCSS files
-      uses: gha-utilities/sass-build@v0.2.2
-      with:
-        source: ${{ github.workspace }}/app/sass/master.scss
-        destination: ${{ github.workspace }}/public/styles/master.css
-    
     - uses: actions/checkout@v2
     - name: Build the site in the jekyll/builder container
       run: |

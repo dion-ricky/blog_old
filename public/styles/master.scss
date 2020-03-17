@@ -1,3 +1,5 @@
+---
+---
 @import 'config';
 @import 'post';
 @import 'mobile';
@@ -157,10 +159,8 @@ header {
 }
 
 .post-banner-title {
-  max-height: 45px;
   margin: 0;
   transition: 0.15s;
-  overflow: hidden;
 }
 
 .post-banner-details {
