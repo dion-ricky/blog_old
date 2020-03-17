@@ -11,7 +11,7 @@
       <link rel="stylesheet" href={{ css | relative_url }}>
     {% endfor %} {% endif %}
     {% if layout.js %} {% for script in layout.js %}
-      <script src={{ script }}></script>
+      <script src={{ script | relative_url }}></script>
     {% endfor %} {% endif %}
   </head>
   <body class="flex flex-vertical">
