@@ -4,7 +4,7 @@ layout: post
 description: >-
   Sebagai pengguna setia Google Drive aku kecewa dengan performa program Backup and Sync yang disediakan oleh Google, apakah kamu juga merasakan hal yang sama? Coba cek beberapa poin dibawah!
 category: Tech
-tags: [backup, tech-rant]
+tags: [tech-rant]
 img:
 color:
 bgcolor: rgba(0, 214, 214, 0.5)
