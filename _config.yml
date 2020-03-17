@@ -17,5 +17,3 @@ plugins:
 
 sass:
   sass_dir: public/styles
-
-repository: dion-ricky/blog
