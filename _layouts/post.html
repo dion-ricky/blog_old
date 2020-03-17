@@ -28,7 +28,7 @@ js:
         {% endif %}
       {% endfor %}
       <span> · </span>
-      <span>#</span>
+      <span>#
       {% for tag in page.tags %}
         {% for t in site.tags %}
           {% if t.name == tag %}
@@ -36,9 +36,9 @@ js:
           {% endif %}
         {% endfor %}
         {% if forloop.last == true %}
-          <span></span>
+          </span>
         {% else %}
-          <span>, </span>
+          , 
         {% endif %}
       {% endfor %}
       <br>
