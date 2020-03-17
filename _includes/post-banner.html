@@ -11,7 +11,7 @@ style="{% if post.img %} background-image: url({{ '/public/assets/' | append: po
         {% endif %}
       {% endfor %}
       <div class="post-banner-tags">
-        <span># </span>
+        <span>#
         {% for tag in post.tags %}
           {% for t in site.tags %}
             {% if t.name == tag %}
@@ -19,13 +19,15 @@ style="{% if post.img %} background-image: url({{ '/public/assets/' | append: po
             {% endif %}
           {% endfor %}
           {% if forloop.last == true %}
-            <span></span>
+            </span>
           {% else %}
-            <span>, </span>
+            , 
           {% endif %}
         {% endfor %}
       </div>
     </div>
-    <h3 class="post-banner-title">{{ post.title }}</h3>
+    <h3 class="post-banner-title">
+    {{ post.title | truncate: 65 }}
+    </h3>
   </div>
 </div>
